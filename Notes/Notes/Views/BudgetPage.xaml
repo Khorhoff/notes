@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ig="clr-namespace:Infragistics.XamarinForms.Controls.Charts;assembly=Infragistics.XF.Charts" 
+             xmlns:notes="clr-namespace:Notes.Views" x:DataType="notes:BudgetPage"
+             x:Class="Notes.Views.BudgetPage">
+    <Shell.TitleView>
+        <AbsoluteLayout>
+            <Label Text="Расходы" FontSize="20" FontAttributes="Bold" TextColor="White"
+                   AbsoluteLayout.LayoutBounds=".0, .5, AutoSize, AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            <Button ImageSource="Refresh.png" BackgroundColor="Transparent" x:Name="RefreshButton" Clicked="RefreshButton_Clicked"
+                    AbsoluteLayout.LayoutBounds=".95, .5, 50, 50" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+        </AbsoluteLayout>
+    </Shell.TitleView>
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <Button x:Name="DecreaseMonth" Clicked="DecreaseMonth_Clicked" Text="&lt;-" FontSize="20" FontAttributes="Bold"
+                    AbsoluteLayout.LayoutBounds="0.03,0.01,0.2,0.07" AbsoluteLayout.LayoutFlags="All"/>
+            <Button x:Name="IncreaseMonth" Clicked="IncreaseMonth_Clicked" Text="->" FontSize="20" FontAttributes="Bold"
+                    AbsoluteLayout.LayoutBounds="0.97,0.01,0.2,0.07" AbsoluteLayout.LayoutFlags="All"/>
+            <Label x:Name="DataMonth" Text="Нет расоходов" HorizontalTextAlignment="Center" FontSize="20" FontAttributes="Bold"
+                   AbsoluteLayout.LayoutBounds="0.5,0.025, AutoSize, AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            <Label x:Name="IsData" Text="Нет расоходов" HorizontalTextAlignment="Center" FontSize="20" FontAttributes="Bold"
+                   AbsoluteLayout.LayoutBounds="0.5,0.085, AutoSize, AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+            <ig:XamPieChart x:Name="StatisticsChart" FontSize="12" FontAttributes="Bold"
+                            ValueMemberPath="Amount" LabelMemberPath="CategoryName"
+                            Legend="{x:Reference legend}" LegendLabelMemberPath="LegendLabel"
+                            AbsoluteLayout.LayoutBounds="0.5, 0.3, 1, 0.58" AbsoluteLayout.LayoutFlags="All">
+            </ig:XamPieChart>
+            <ig:ItemLegend x:Name="legend" BackgroundColor="White" 
+                           AbsoluteLayout.LayoutBounds="1, 1, 0.97, 0.321" AbsoluteLayout.LayoutFlags="All"/>
+            <Button ImageSource="Add.png" BackgroundColor="Transparent" x:Name="AddButton" Clicked="AddButton_Clicked"
+                    AbsoluteLayout.LayoutBounds="0.95,0.95,50,50" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

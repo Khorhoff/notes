@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:Notes.Views"
+             x:Class="Notes.MainPage">
+    <Shell.FlyoutHeader>
+        <StackLayout HeightRequest="107" BackgroundColor="LightGray">
+            <Image HorizontalOptions="Center" VerticalOptions="Center" Source="NotesHeader.png" Margin="0"/>
+            <Frame BackgroundColor="Black" Margin="0"/>
+        </StackLayout>
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem FlyoutItemIsVisible="False">
+        <Tab>
+            <ShellContent>
+                <ContentPage Title="Приветствуем!">
+                    <AbsoluteLayout>
+                        <Image Source="NotesHeader.png"
+                               AbsoluteLayout.LayoutBounds="0.5,0.1,0.9,0.3" AbsoluteLayout.LayoutFlags="All"/>
+                        <StackLayout AbsoluteLayout.LayoutBounds="0.5,0.6,0.9,0.3" AbsoluteLayout.LayoutFlags="All">
+                            <Label Text="Создавайте заметки, добавляйте их в календарь и следите за своими расходами"
+                                   FontSize="20" HorizontalTextAlignment="Center" TextColor="Black"/>
+                        </StackLayout>
+                    </AbsoluteLayout>
+                </ContentPage>
+            </ShellContent>
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Заметки" Icon="Sticky_note.png" >
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:StickyNotePage}"/>
+        </Tab>
+    </FlyoutItem>
+    
+    <FlyoutItem Title="Календарь" Icon="Calendar.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:CalendarPage}"/>
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Бюджет" Icon="Budget.png">
+        <Tab Title="Расходы">
+            <ShellContent ContentTemplate="{DataTemplate views:BudgetPage}"/>
+        </Tab>
+
+        <Tab Title="Кошельки">
+            <ShellContent ContentTemplate="{DataTemplate views:AllPursesPage}"/>
+        </Tab>
+    </FlyoutItem>
+
+</Shell>

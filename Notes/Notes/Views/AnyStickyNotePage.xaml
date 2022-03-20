@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Notes.Views.AnyStickyNotePage">
+    <ContentPage.Content>
+        <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <AbsoluteLayout BackgroundColor="DeepSkyBlue"
+                         AbsoluteLayout.LayoutBounds="0,0,1,0.07" AbsoluteLayout.LayoutFlags="All">
+                <Button ImageSource="Back.png" BackgroundColor="Transparent" x:Name="BackButton" Clicked="BackButton_Clicked"
+                    AbsoluteLayout.LayoutBounds=".02, .3, 50, 50" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                <Label Text="Заметка" FontSize="20" FontAttributes="Bold" TextColor="White"
+                   AbsoluteLayout.LayoutBounds=".2, .5, AutoSize, AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                <Button ImageSource="Save.png" BackgroundColor="Transparent" x:Name="SaveButton" Clicked="SaveButton_Clicked"
+                    AbsoluteLayout.LayoutBounds=".65, .3, 50, 50" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                <Button ImageSource="LocalSetting.png" BackgroundColor="Transparent" x:Name="SettingButton" Clicked="SettingButton_Clicked"
+                    AbsoluteLayout.LayoutBounds=".8, .3, 50, 50" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                <Button ImageSource="Redact.png" BackgroundColor="Transparent" x:Name="RedactButton" Clicked="RedactButton_Clicked"
+                    AbsoluteLayout.LayoutBounds=".8, .3, 50, 50" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                <Button ImageSource="Close.png" BackgroundColor="Transparent" x:Name="DeleteButton" Clicked="DeleteButton_Clicked"
+                    AbsoluteLayout.LayoutBounds=".95, .3, 50, 50" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            </AbsoluteLayout>
+            <Label Text="Название" FontSize="30"
+                   AbsoluteLayout.LayoutBounds="0.05,0.07,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            <Entry x:Name="NoteTitle" FontSize="30"
+                   AbsoluteLayout.LayoutBounds="1, 0.13, 1, AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional"/>
+            <Label Text="Текст заметки" FontSize="30"
+                   AbsoluteLayout.LayoutBounds="0.04,0.21,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            <ScrollView BackgroundColor="LightGray"
+                        AbsoluteLayout.LayoutBounds="0.05, 0.871, 1 ,0.69" AbsoluteLayout.LayoutFlags="All">
+                <Editor x:Name="NoteText" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                </Editor>
+            </ScrollView>
+            <Label x:Name="LatsModifiedDate" BackgroundColor="Azure" FontSize="18"
+                   AbsoluteLayout.LayoutBounds="0.05, 1, 0.3, 0.04" AbsoluteLayout.LayoutFlags="All"/>
+            <Label x:Name="Category" HorizontalTextAlignment="Start" BackgroundColor="Bisque" FontSize="18"
+                   AbsoluteLayout.LayoutBounds="0.98, 1, 0.3, 0.04" AbsoluteLayout.LayoutFlags="All"/>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

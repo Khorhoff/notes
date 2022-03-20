@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Notes.Views.BudgetNotePage">
+    <ContentPage.Content>
+        <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <AbsoluteLayout BackgroundColor="DeepSkyBlue"
+                         AbsoluteLayout.LayoutBounds="0,0,1,0.07" AbsoluteLayout.LayoutFlags="All">
+                <Label Text="Изменение баланса" FontSize="20" FontAttributes="Bold" TextColor="White"
+                   AbsoluteLayout.LayoutBounds=".05, .5, AutoSize, AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                <Button ImageSource="Save.png" BackgroundColor="Transparent" x:Name="SaveButton" Clicked="SaveButton_Clicked"
+                    AbsoluteLayout.LayoutBounds=".8, .3, 50, 50" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                <Button ImageSource="LocalSetting.png" BackgroundColor="Transparent" x:Name="SettingButton" Clicked="SettingButton_Clicked" IsVisible="false"
+                    AbsoluteLayout.LayoutBounds=".65, .3, 50, 50" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                <Button ImageSource="Close.png" BackgroundColor="Transparent" x:Name="CloseButton" Clicked="CloseButton_Clicked"
+                    AbsoluteLayout.LayoutBounds=".95, .3, 50, 50" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            </AbsoluteLayout>
+            
+            <Picker x:Name="PursePicker" Title="Кошелек" SelectedIndexChanged="PursePicker_SelectedIndexChanged"
+                    AbsoluteLayout.LayoutBounds="0.04, 0.075, 0.6, AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional"/>
+            <Label x:Name="AvailableAmount" BackgroundColor="Coral" FontSize="24" HorizontalTextAlignment="End"
+                   AbsoluteLayout.LayoutBounds="1, 0.14, 0.4, AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional"/>
+            
+            <Label x:Name="Summ" FontSize="24" HorizontalTextAlignment="Start" Text="Сумма:" IsVisible="false"
+                   AbsoluteLayout.LayoutBounds="0.02, 0.2, AutoSize, AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            <Entry x:Name="Amount" FontSize="30" IsVisible="false"
+                   AbsoluteLayout.LayoutBounds="0.04, 0.255, 0.6, AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional"/>
+            
+            <Picker x:Name="NoteTypePicker" Title="Тип изменения" SelectedIndexChanged="NoteTypePicker_SelectedIndexChanged" IsVisible="false"
+                    AbsoluteLayout.LayoutBounds="0.04, 0.4, 0.6, AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional"/>
+            
+            <Picker x:Name="SecondPursePicker" Title="Кошелек" SelectedIndexChanged="SecondPursePicker_SelectedIndexChanged" IsVisible="false"
+                    AbsoluteLayout.LayoutBounds="0.04, 0.5, 0.6, AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional"/>
+            <Label x:Name="SecondAvailableAmount" BackgroundColor="Coral" FontSize="24" HorizontalTextAlignment="End" IsVisible="false"
+                   AbsoluteLayout.LayoutBounds="1, 0.56, 0.385, AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional"/>
+            
+            <Label x:Name="NoteDateTime" BackgroundColor="Azure" FontSize="18"
+                   AbsoluteLayout.LayoutBounds="0.05, 1, 0.3, 0.04" AbsoluteLayout.LayoutFlags="All"/>
+            <Label x:Name="Category" HorizontalTextAlignment="Start" BackgroundColor="Bisque" FontSize="18"
+                   AbsoluteLayout.LayoutBounds="0.98, 1, 0.3, 0.04" AbsoluteLayout.LayoutFlags="All"/>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

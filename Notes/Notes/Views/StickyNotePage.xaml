@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Notes.Views.StickyNotePage">
+    <Shell.TitleView>
+        <AbsoluteLayout>
+            <Label Text="Заметки" FontSize="20" FontAttributes="Bold" TextColor="White"
+                   AbsoluteLayout.LayoutBounds=".0, .5, AutoSize, AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            <Button ImageSource="Sort.png" BackgroundColor="Transparent" x:Name="SortButton" Clicked="SortButton_Clicked"
+                    AbsoluteLayout.LayoutBounds=".95, .3, 50, 50" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+        </AbsoluteLayout>
+    </Shell.TitleView>
+    
+    <ContentPage.Content>
+        <AbsoluteLayout VerticalOptions="Fill">
+            <Button x:Name="AddNote" Clicked="AddNote_Clicked" Text="+" HorizontalOptions="Fill" BorderWidth="3" 
+                    BorderColor="LightBlue" BackgroundColor="Transparent" FontSize="18"
+                    AbsoluteLayout.LayoutBounds="0.5, 0.01, 0.9, 0.05" AbsoluteLayout.LayoutFlags="All"/>
+            <Line HeightRequest="1" BackgroundColor="Black"
+                  AbsoluteLayout.LayoutBounds="0.5, 0.08, 1, 0.005" AbsoluteLayout.LayoutFlags="All"/>
+            <ScrollView AbsoluteLayout.LayoutBounds="0.05, 1, 1, 0.9" AbsoluteLayout.LayoutFlags="All">
+                <StackLayout x:Name="NoteList">
+                     
+                </StackLayout>
+            </ScrollView>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Notes.Models.StickyNote">
+    <Position X="1.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAACAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAACAAAIAA=</HashCode>
+      <FileName>Models\StickyNote.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Notes.Models.CalendarNote">
+    <Position X="7" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAACAAAAAAAAAABAAAAAAAAAAAAAAAAAACAAAIAA=</HashCode>
+      <FileName>Models\CalendarNote.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Notes.Models.Purse">
+    <Position X="3.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAABAAAAAASAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Models\Purse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Notes.Models.Settings">
+    <Position X="10.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAACAAAAAAAAAAAAAEAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Models\Settings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Notes.Models.SubModels.BudgetNote">
+    <Position X="5.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAEAAACAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Models\SubModels\BudgetNote.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Notes.Models.SubModels.RemittanceNote">
+    <Position X="7" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\SubModels\RemittanceNote.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Notes.Models.SubModels.Category">
+    <Position X="10.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\SubModels\Category.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Notes.Models.SubModels.ChartCategory">
+    <Position X="7" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAACAACQAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Models\SubModels\ChartCategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Notes.Models.SubModels.ChartData">
+    <Position X="7" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\SubModels\ChartData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Notes.Models.SubModels.ExpenseData">
+    <Position X="8.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\SubModels\ExpenseData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Notes.Models.SubModels.MonthlyExpenses">
+    <Position X="8.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAgAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Models\SubModels\MonthlyExpenses.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Notes.Models.SubModels.MonthlyExpenseByCategory">
+    <Position X="8.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Models\SubModels\MonthlyExpenseByCategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Notes.Services.SubService.CalendarNoteService">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAMgAAAAAQAQAAAAAAAAAAAAAEiAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\SubService\CalendarNoteService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Notes.Services.SubService.PurseService">
+    <Position X="3.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAMgAAAAAQAQAAAAAAAAAAAAAEiAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\SubService\PurseService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Notes.Services.SubService.StickyNoteService">
+    <Position X="1.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAMgAAAAAQAQAAAAAAAAAAAAAEiAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\SubService\StickyNoteService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Notes.Interface.IDataChanger">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAiAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IDataChanger.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Notes.Interface.IDataReader">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IDataReader.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Notes.Interface.IFileService">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IFileService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
